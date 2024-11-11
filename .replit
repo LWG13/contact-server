@@ -1,0 +1,18 @@
+entrypoint = "index.cjs"
+modules = ["nodejs-22"]
+hidden = [".config", "package-lock.json"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["node", "index.js"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[[ports]]
+localPort = 6565
+externalPort = 3000
