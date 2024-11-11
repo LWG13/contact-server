@@ -13,7 +13,7 @@ app.post("/", async (req,res) => {
   let result = await data.save();
   res.send(result)
 });
-app.listen(6565, () => {
+app.listen(3000, () => {
   console.log("Server Running")
 })
 
